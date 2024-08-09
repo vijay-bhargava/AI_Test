@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 //const mongoose = require('mongoose');
-const config = require('./config/config');
 const app = express();
 
 const userRoutes = require('./routes/userRoutes');
@@ -22,6 +21,6 @@ app.use('/api/users', userRoutes);
 app.use('/api/audio', audioRoutes);
 app.use('/api/profileGenerate', profileRoutes);
 
-app.listen(config.port, () => {
-  console.log(`Server running on port ${config.port}`);
+app.listen('3003', () => {
+  console.log(`Server running on port 3003`);
 });

@@ -1,6 +1,6 @@
 // services/openaiService.js
 const langchain = require("./langchain");
-const config = require("../config/config");
+//const config = require("../config/config");
 const axios = require("axios");
 const fs = require('file-system');
 const path = require('path')
