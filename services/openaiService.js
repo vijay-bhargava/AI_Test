@@ -4,8 +4,8 @@ const langchain = require("./langchain");
 const axios = require("axios");
 const fs = require('file-system');
 const path = require('path')
-const conkey = require('dotenv').config();
-
+require('dotenv').config();
+const apikeynew = process.env.API_KEY;
 
 const speechFile = path.resolve("./speech.mp3");
 
@@ -20,7 +20,7 @@ const generateText = async (prompt) => {
       },
       {
         headers: {
-          Authorization: `Bearer ${conkey.API_KEY}`,
+          Authorization: `Bearer `+apikeynew,
           "Content-Type": "application/json",
         },
       }
@@ -43,7 +43,7 @@ const generateImage = async (prompt) => {
       },
       {
         headers: {
-          Authorization: `Bearer ${conkey.API_KEY}`,
+          Authorization: `Bearer `+apikeynew,
           "Content-Type": "application/json",
         },
       }
@@ -67,7 +67,7 @@ const generateTextSpeach = async (prompt) => {
       },
       {
         headers: {
-          Authorization: `Bearer ${conkey.API_KEY}`,
+          Authorization: `Bearer `+apikeynew,
           "Content-Type": "application/json",
         },
         responseType: 'arraybuffer'
@@ -89,7 +89,7 @@ const generateSpeachText = async (prompt) => {
       },
       {
         headers: {
-          Authorization: `Bearer ${conkey.API_KEY}`,
+          Authorization: `Bearer `+apikeynew,
           "Content-Type": "application/json",
         },
       }
@@ -112,7 +112,7 @@ const generateProfile = async (prompt) => {
       },
       {
         headers: {
-          Authorization: `Bearer ${conkey.API_KEY}`,
+          Authorization: `Bearer `+apikeynew,
           "Content-Type": "application/json",
         },
       }

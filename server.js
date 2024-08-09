@@ -20,7 +20,7 @@ app.use('/api/imageGenerate', imageGenerationRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/audio', audioRoutes);
 app.use('/api/profileGenerate', profileRoutes);
-
+ 
 app.listen('3003', () => {
   console.log(`Server running on port 3003 and fetching data`);
 });
